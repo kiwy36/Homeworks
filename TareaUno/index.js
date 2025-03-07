@@ -1,4 +1,9 @@
-//Tarea uno
+// TAREAS video clase 1
+// Tarea 1:
+// Crear una funcion que tome como parametro el año actual y el año de nacimiento y calcule aproximadamente la edad del usuario
+// Preguntarle estos datos al usuario y guardarlo en 2 variables.
+// Ejecutar la funcion con estos datos
+// Imprimir el resultado en la consola
 // Función que calcula los años transcurridos
 function CalcularEdad (natalicio,fechaActual){
     return natalicio-fechaActual;
