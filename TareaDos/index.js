@@ -17,11 +17,8 @@ function calcularSalarioAnual(salarioMensual) {
     const mesesEnUnAnio = 12
     return salarioMensual * mesesEnUnAnio;
 }
-
 let salarioMensual = Number(prompt('Cual es tu salario mensual?'));
-
 console.log(salarioMensualAAnual(salarioMensual));
-
 // Funciones en cuestion
 function sumar(numero1, numero2) {
     return numero1 + numero2;
