@@ -1,7 +1,17 @@
 // Tarea 2
 // Preguntar el salario anual y calcular el salario mensual
 // Preguntar el salario mensual y calcular el anual
+// Preguntar el salario anual y calcular el salario mensual
+const salarioAnual = parseFloat(prompt("¿Cuál es tu salario anual?"));
+const salarioMensual = salarioAnual / 12;
+alert(`Tu salario mensual es: ${salarioMensual.toFixed(2)}`);
+// Preguntar el salario mensual y calcular el salario anual
+const salarioMensuald = parseFloat(prompt("¿Cuál es tu salario mensual?"));
+const salarioAnuald = salarioMensual * 12;
+alert(`Tu salario anual es: ${salarioAnual.toFixed(2)}`);
+
 /*
+
 function calcularSalarioMensual(salarioAnual) {
     const mesesEnUnAnio = 12
     return salarioAnual / mesesEnUnAnio;
