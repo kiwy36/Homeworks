@@ -9,7 +9,6 @@ alert(`Tu salario mensual es: ${salarioMensual.toFixed(2)}`);
 const salarioMensuald = parseFloat(prompt("¿Cuál es tu salario mensual?"));
 const salarioAnuald = salarioMensual * 12;
 alert(`Tu salario anual es: ${salarioAnual.toFixed(2)}`);
-
 /*
 
 function calcularSalarioMensual(salarioAnual) {
