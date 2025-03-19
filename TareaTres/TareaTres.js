@@ -93,3 +93,42 @@ for (let i = 0; i < nuevasComidas.length; i++) {
 }
 
 document.getElementById('nuevacomida').textContent = resultado;
+////////////////////////////clase 5///////////////////////////////////
+for (let i =10 ; i>=0; i--){
+    console.log(i);
+    if(i===5){
+        console.log('llego a la mitad');
+        
+    }else{
+        console.log('naranamjas');
+        
+    }
+    
+}
+/////////////fizzbuzz//////////
+for (let i = 1; i <=50; i++) {
+    if(i%3===0 && i%5===0){
+        console.log('fizz buzz');
+    }else if(i%3===0){
+    console.log('fizz')
+    }else if(i%5===0){
+        console.log('buzz');
+    }else{
+        console.log(i);
+    }
+}
+/////////////////operadores
+//and
+//&& true----> true and true => true
+//&& true && false ----> false
+//&& false && false ----> false
+//xor
+//true || true ---> true
+// true || false ---> true
+// false || false ---> false
+/////////////////////////tareas
+const nuestroTitulo = document.querySelector('h1');//trae una etiqueta puntual
+console.log(nuestroTitulo);///funciona
+const subtitulos = document.querySelectorAll('h2');//trae todos con esa etiqueta con formato de array
+console.log(subtitulos);
+const nuevoElemento = document.getElementById('nuevoElemento').textContent = `nuevo elemento`//agrega elementos
