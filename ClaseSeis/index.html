@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="https://i.ibb.co/jvkzfpt8/kiwi.png" />
@@ -12,11 +12,28 @@
 </head>
 <body>
     <section>
-        <h1>clase 6</h1>
+        <h1>Trabajando con eventos</h1>
         <h2 id="elemento"></h2>
         <h2>imagen para el ejercicio</h2>
         <img id="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK56y8lf_-Dew95q-XWPDUbMjJ8uKBSGygGw&s" alt="caballero" height="300px" width="300px">
         <script src="./index.js"></script>
+    </section>
+    <section>
+        <form>
+            <!-- Input para nombre -->
+            <h2>formulario</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
+            <br>
+            <label for="apellido">apellido:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido">
+            <br>
+            <!-- Input para edad -->
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="0" placeholder="Ingresa tu edad">
+            <br>
+            <button id="saludar">Saludar</button>
+        </form>
     </section>
 </body>
 </html>
