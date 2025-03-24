@@ -23,22 +23,24 @@ const newText = document.createTextNode('ingresando nuevo texto'); // Creamos el
 newParrafo.appendChild(newText); // Añadimos el texto al párrafo
 newDiv.appendChild(newParrafo); // Añadimos el párrafo al body
 //////////tarea.js
-const $form = document.querySelector('form')
-$form.addEventListener('submit',function(e){
-    e.preventDefault();
-    return false;
+// Selección del formulario
+document.addEventListener('DOMContentLoaded', function() {
+    const $form = document.querySelector('#formulario');
+
+    if ($form) {
+        $form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita que el formulario se envíe y recargue la página
+            saludarPersona(); // Llama la función de saludo
+        });
+    }
+
+    function saludarPersona() {
+        const nombre = document.querySelector('#nombre').value;
+        const apellido = document.querySelector('#apellido').value;
+        const edad = document.querySelector('#edad').value;
+        const saludo = `Hola ${nombre} ${apellido}, de edad ${edad}`;
+        
+        console.log(saludo);
+        document.querySelector('#saludo').textContent = saludo;
+    }
 });
-
-const edadFueraDelEvento = document.querySelector('#edad').value
-console.log(edadFueraDelEvento)
-
-function saludarPersona(){
-    const nombre = document.querySelector('#nombre').value;
-    const apellido = document.querySelector('#apellido').value;
-    const edad = document.querySelector('#edad').value;
-    console.log(`hola ${nombre} ${apellido},de edad ${edad}`)
-}
-const $saludar = document.querySelector('#saludar');
-$saludar.addEventListener('click',saludarPersona)
-
-
