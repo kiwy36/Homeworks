@@ -11,13 +11,24 @@
 </head>
 </head>
 <body>
-    <form>
-        <input type="number" placeholder="ingresa un numero" class="num">
-        <input type="number" placeholder="ingresa un numero" class="num">
-        <input type="number" placeholder="ingresa un numero" class="num">
-        <input type="number" placeholder="ingresa un numero" class="num">
-        <button id="calcular">calcular</button>
-        <p>el promedio es <span id="resultado"><!-- --></span></p>
+    <form id="form-notas">
+        <h1>promedio de notas</h1>
+        <input type="number" placeholder="ingresa un numero" class="nota">
+        <input type="number" placeholder="ingresa un numero" class="nota">
+        <input type="number" placeholder="ingresa un numero" class="nota">
+        <input type="number" placeholder="ingresa un numero" class="nota">
+        <button id="calcular-promedio-notas">calcular</button>
+        <p>el promedio es <span id="resultado-notas"><!-- --></span></p>
+    </form>
+    
+    <form id="form-asistencias">
+        <h1>promedio de asistencias</h1>
+        <input type="number" placeholder="ingresa asistencias" class="asistencia">
+        <input type="number" placeholder="ingresa asistencias" class="asistencia">
+        <input type="number" placeholder="ingresa asistencias" class="asistencia">
+        <input type="number" placeholder="ingresa asistencias" class="ssistencia">
+        <button id="calcular-asistencias">calcular</button>
+        <p>el promedio de asistencias es <span id="resultado-asistencias"><!-- --></span></p>
     </form>
     <script src="./claseSiete.js"></script>
 </body>
