@@ -1,4 +1,3 @@
-
 function calcularPromedio(numeros){
     let acumulador = 0 ;
     for(let i=0; i<numeros.length;i++){
@@ -27,7 +26,6 @@ $calcularPromedioAsistencias.addEventListener('click',function(){
     }
 })
 
-
 //fomularios no sumiteables
 const $formNotas = document.querySelector('#form-notas');
 $formNotas.addEventListener('submit',function(e){
@@ -43,3 +41,39 @@ $formAsistencias.addEventListener('submit',function(e){
 //calcular el promedio de valores
 //agregar boton reset
 //agregar opcion para borrar un input
+document.querySelector('#generar-inputs').addEventListener('click', function () {
+    const cantidad = Number(document.querySelector('#cantidad-familiares').value);
+    const contenedor = document.querySelector('#contenedor-salarios');
+    
+    contenedor.innerHTML = ''; // Limpiar antes de generar nuevos inputs
+
+    for (let i = 0; i < cantidad; i++) {
+        const div = document.createElement('div');
+        div.classList.add('salario-item');
+
+        const input = document.createElement('input');
+        input.type = 'number';
+        input.classList.add('salario');
+        input.placeholder = `Salario del familiar ${i + 1}`;
+
+        const botonEliminar = document.createElement('button');
+        botonEliminar.textContent = 'X';
+        botonEliminar.classList.add('eliminar-salario');
+        botonEliminar.addEventListener('click', function () {
+            div.remove();
+        });
+
+        div.appendChild(input);
+        div.appendChild(botonEliminar);
+        contenedor.appendChild(div);
+    }
+});
+document.querySelector('#calcular-promedio-salarios').addEventListener('click', function () {
+    const $salarios = document.querySelectorAll('.salario');
+    const salarios = Array.from($salarios).map(salario => Number(salario.value) || 0);
+    document.querySelector('#resultado-salarios').textContent = Math.round(calcularPromedio(salarios));
+});
+document.querySelector('#reset-salarios').addEventListener('click', function () {
+    document.querySelector('#contenedor-salarios').innerHTML = ''; // Elimina todos los inputs
+    document.querySelector('#resultado-salarios').textContent = ''; // Borra el resultado
+});

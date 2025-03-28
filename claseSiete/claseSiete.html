@@ -30,6 +30,17 @@
         <button id="calcular-asistencias">calcular</button>
         <p>el promedio de asistencias es <span id="resultado-asistencias"><!-- --></span></p>
     </form>
+    <!--tarea-->
+    <form id="form-salarios">
+        <h1>Promedio de Salarios Familiares</h1>
+        <label for="cantidad-familiares">Cantidad de familiares:</label>
+        <input type="number" id="cantidad-familiares" min="1">
+        <button type="button" id="generar-inputs">Generar</button>
+        <div id="contenedor-salarios"></div>
+        <button type="button" id="calcular-promedio-salarios">Calcular</button>
+        <button type="button" id="reset-salarios">Reset</button>
+        <p>El promedio de salarios es <span id="resultado-salarios"></span></p>
+    </form>
     <script src="./claseSiete.js"></script>
 </body>
 </html>
