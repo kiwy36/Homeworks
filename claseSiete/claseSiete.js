@@ -77,3 +77,8 @@ document.querySelector('#reset-salarios').addEventListener('click', function () 
     document.querySelector('#contenedor-salarios').innerHTML = ''; // Elimina todos los inputs
     document.querySelector('#resultado-salarios').textContent = ''; // Borra el resultado
 });
+
+
+
+
+
