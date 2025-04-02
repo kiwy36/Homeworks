@@ -53,6 +53,7 @@ document.querySelector('#generar-inputs').addEventListener('click', function () 
 
         const input = document.createElement('input');
         input.type = 'number';
+        input.min=1;
         input.classList.add('salario');
         input.placeholder = `Salario del familiar ${i + 1}`;
 
@@ -77,3 +78,28 @@ document.querySelector('#reset-salarios').addEventListener('click', function () 
     document.querySelector('#contenedor-salarios').innerHTML = ''; // Elimina todos los inputs
     document.querySelector('#resultado-salarios').textContent = ''; // Borra el resultado
 });
+
+
+////
+const cantidadIntegrantes = Number(prompt('Número de integrantes'));
+const $integrantes = document.querySelector('#integrantes');
+
+for (let i = 0; i < cantidadIntegrantes; i++) {
+    const idIntegrante = 'integrante'+i
+    
+    const $label = document.createElement('label');
+    $label.textContent = 'Salario del integrante ' + (i + 1);
+    $label.htmlFor= idIntegrante
+
+    const $input = document.createElement('input');
+    $input.id=idIntegrante
+    $input.type = 'number';
+    $input.min = 0;
+
+    const $br = document.createElement('br');
+
+    $integrantes.appendChild($label);
+    $integrantes.appendChild($input);
+    $integrantes.appendChild($br);
+}
+
