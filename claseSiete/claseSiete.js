@@ -81,29 +81,43 @@ document.querySelector('#reset-salarios').addEventListener('click', function () 
 
 
 ////tarea clase
-const cantidadIntegrantes = Number(prompt('Número de integrantes'));
+//const cantidadIntegrantes = Number(prompt('Número de integrantes'));
+document.querySelector('#formulario-integrantes').addEventListener('submit',function(event){
+    event.preventDefault();
+    const cantidadIntegrantes = Number(document.querySelector('#cantidad-integrantes').value)
+    for (let i = 0; i < cantidadIntegrantes; i++) {
+        const idIntegrante = 'integrante'+i
+
+        const $label = document.createElement('label');
+        $label.textContent = 'Salario del integrante ' + (i + 1);
+        $label.htmlFor= idIntegrante
+
+        const $input = document.createElement('input');
+        $input.id=idIntegrante;
+        $input.className = 'integrante'
+        $input.type = 'number';
+        $input.min = 0;
+        
+        const $br = document.createElement('br');
+        const $removerIntegrante = document.createElement('button')
+        $removerIntegrante.textContent = 'X';
+        $removerIntegrante.addEventListener('click',function(){
+            $label.remove();
+            $input.remove();
+            $removerIntegrante.remove();
+            $br.remove();
+        })
+
+        $integrantes.appendChild($label);
+        $integrantes.appendChild($input);
+        $integrantes.appendChild($br);
+        $integrantes.appendChild($removerIntegrante);
+    }
+
+})
 const $integrantes = document.querySelector('#integrantes');
 const $contenedorResultado = document.querySelector('#contenedor-resultado');
 $contenedorResultado.style.display= 'none'
-for (let i = 0; i < cantidadIntegrantes; i++) {
-    const idIntegrante = 'integrante'+i
-
-    const $label = document.createElement('label');
-    $label.textContent = 'Salario del integrante ' + (i + 1);
-    $label.htmlFor= idIntegrante
-
-    const $input = document.createElement('input');
-    $input.id=idIntegrante;
-    $input.className = 'integrante'
-    $input.type = 'number';
-    $input.min = 0;
-
-    const $br = document.createElement('br');
-
-    $integrantes.appendChild($label);
-    $integrantes.appendChild($input);
-    $integrantes.appendChild($br);
-}
 
 document.querySelector('#calcularPromedio').addEventListener('click',function(){
     const $mensualidad = document.querySelectorAll('#integrantes input[type="number"]');
@@ -117,6 +131,10 @@ document.querySelector('#calcularPromedio').addEventListener('click',function(){
     $contenedorResultado.style.display='';
     
 })
+document.querySelector('#recargar').addEventListener('click', function(){
+    window.location.reload();
+});
+
 //aqui va la funcion pero ya esta mas arriba
 /*function calcularPromedio(numeros){
     let acumulador = 0 ;
