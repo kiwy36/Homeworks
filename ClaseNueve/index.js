@@ -1,7 +1,3 @@
-function saludar(){
-    return ('saludar')
+function falloTotal(){
+    return ('fallo total en todo')
 }
-function saludar(nombre) {
-    return "Hola " + nombre;
-  }
-  
