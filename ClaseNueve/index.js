@@ -1,3 +1,6 @@
 function falloTotal(){
-    return ('fallo total en todo')
+    const texto = 'fallo total'
+    console.log(texto);
 }
+const taxto ='otro texto'
+falloTotal()
