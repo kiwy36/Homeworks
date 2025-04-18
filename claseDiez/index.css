@@ -1,0 +1,66 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #d0e8ff);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilo del formulario */
+form {
+    background: linear-gradient(to bottom, #ffffff, #b3d4fc);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+/* Etiquetas de los campos */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #0a2a66;
+}
+
+/* Inputs y selects */
+input[type="number"],
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #a0c8ff;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: #f0f8ff;
+    transition: border 0.3s, background-color 0.3s;
+}
+
+/* Hover en inputs y selects */
+input[type="number"]:hover,
+select:hover {
+    border-color: #0066cc;
+    background-color: #e6f2ff;
+}
+
+/* Botón de submit */
+input[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(to right, #4d9efc, #0073e6);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Hover del botón */
+input[type="submit"]:hover {
+    background: linear-gradient(to right, #66b3ff, #3399ff);
+    transform: scale(1.03);
+}
