@@ -26,16 +26,19 @@ document.querySelector('form').addEventListener('submit',function(event){
 })
 
 function mostrarCuentas(){
+    // Selecciona los elementos <select> del formulario
     const $cuentasDesde = document.querySelector('#cuenta-desde');
     const $cuentasHacia = document.querySelector('#cuenta-hacia');
+    // Recorre todas las cuentas disponibles
     for (let i= 0; i < cuentas.length; i++) {
         const cuenta = cuentas[i];
+        // Crea una <option> para el <select> de cuenta desde
         const $cuentaDesde = document.createElement('option');
         $cuentaDesde.setAttribute('id','cuenta-'+ cuenta.id);
         $cuentaDesde.setAttribute('value',cuenta.id)
         $cuentaDesde.textContent=`${cuenta.nombre} tiene en su saldo ${cuenta.saldo}`;
         $cuentasDesde.appendChild($cuentaDesde)
-        
+        // Crea una <option> para el <select> de cuenta hacia (mismo contenido)
         const $cuentaHacia = document.createElement('option');
         $cuentaHacia.setAttribute('id','cuenta-'+ cuenta.id);
         $cuentaHacia.setAttribute('value',cuenta.id)
@@ -44,6 +47,7 @@ function mostrarCuentas(){
     }
 }
 function encontrarCuentaPorId(id){
+    // Recorre el array de cuentas y devuelve la que coincide con el ID recibido
     for (let i = 0; i < cuentas.length; i++) {
         if(cuentas[i].id.toString()===id)
             return cuentas[i]
