@@ -20,6 +20,14 @@ document.querySelector('form').addEventListener('submit',function(event){
     }
     if (cuentaDesde.saldo >= montoSolicitado){
         console.log('transferencia exitosa')
+        // ↓↓↓ LÓGICA PARA TRANSFERIR SALDO ↓↓↓
+        // cuentaDesde.saldo -= montoSolicitado; // Resta el monto de la cuenta origen
+        // cuentaHacia.saldo += montoSolicitado; // Suma el monto en la cuenta destino
+
+        // Opcional: actualizar el DOM con los nuevos saldos
+        // document.querySelector('#cuenta-desde').innerHTML = '';
+        // document.querySelector('#cuenta-hacia').innerHTML = '';
+        // mostrarCuentas(); // Vuelve a mostrar las cuentas con los saldos actualizados
     }else{
         console.log('saldo insuficiente');
     }
